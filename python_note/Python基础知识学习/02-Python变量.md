@@ -81,7 +81,7 @@ print( x == y )          # true
 print( id(x) == id(z) )  # true
 ```
 
-> <font color=orange>*__在使用id的进行判断的时候有两个需要注意的地方：__*</font>
+> <font color=orange>*__在使用id进行判断的时候有两个需要注意的地方：__*</font>
 > 
 > <font color=orachid>1. **小整数池**</font>
 > 
