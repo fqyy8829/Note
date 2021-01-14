@@ -52,3 +52,81 @@
 + <font color=green>**IPython：**</font>IPython是基于CPython之上的一个交互式解释器，也就是说IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的
 + <font color=green>**PyPy：**</font>PyPy是用Python语言实现的Python解释器，PyPy提供了JIT编译器和沙盒功能，对Python代码进行动态编译（注意不是解释），因此运行速度比CPython还要快
 + <font color=green>**IronPython：**</font>IronPython是运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码
+
+### 安装Python解释器
+
+&emsp;&emsp;Python解释器目前已支持所有主流操作系统，在Linux、Unix、Mac系统上自带Python解释器，在Windows系统上需要安装一下。
+
+<font color=orachid>**1. Windows**</font>
+
+&emsp;&emsp;首先下载Windows版本的Python解释器，然后运行安装：
+
+![01.png](./images/01/01-安装Python.png)
+
+&emsp;&emsp;然后直接下一步直到安装成功，然后打开任务终端，输入下面的代码检测是否安装成功：
+
+![02.png](./images/01/02-验证安装.png)
+
+> <font color=orange>*__注意：__*</font>如果执行 python 命令的时候出现了类似<font color=red> *__python 不是可识别的内部或者外部命令 的错误__*</font>，很可能是因为执行安装程序的时候没有选中<font color=red> *__Add Python to Path__* </font>的复选框。此时只需要<font color=red> *__将文件 python.exe 的路径配置到 path 环境变量中__* </font> 就可以了。
+
+<font color=orachid>**2. Mac**</font>
+
+&emsp;&emsp;大多数MacOS系统都默认安装了Python，如果需要安装最新的Python3版本，首先去官网下载Python解释器的Mac版本并运行安装，然后通过下面的方法判断是否安装成功：
+
+![03.png](./images/01/03-mac验证.png)
+
+<font color=orachid>**3. Linux**</font>
+
+&emsp;&emsp;大多数Linux系统默认安装了Python，如果需要安装其它版本的Python，可以使用名为<font color=red> *__deadsnakes__* </font>的包，它能让你轻松地安装多个Python版本，请执行下面的命令：
+
+```shell
+sudo add-apt-repository ppa:deadsnakes/ppa 
+sudo apt-get update 
+sudo apt install python3.8
+```
+
+## 第一个Python程序
+### 运行Python的两种方式
+
+<font color=orachid>**1. 交互式**</font>
+
+&emsp;&emsp;Python自带一个在终端窗口中运行的解释器，打开一个命令窗口，并在其中执行命令：**python**，如果出现了Python提示符（<<<）就说明系统已经找到了Python。然后在Python会话中直接执行输入代码就可以看到代码执行的结果：
+
+![04.png](./images/01/04-交互式.png)
+
+&emsp;&emsp;如果要关闭该终端会话，可按<font color=red> *__ctrl + z__* </font>，也可以执行<font color=red> *__exit()__* </font>命令关闭。
+
+<font color=orachid>**2. 脚本文件**</font>
+
+&emsp;&emsp;创建一个<font color=red> *__demo .py__* </font>文件并输入下面的代码：
+
+```python
+print("Hello World")
+```
+
+&emsp;&emsp;然后在任务终端中输入下面的命令来执行该文件就可以看到代码运行的结果：
+
+![05.png](./images/01/05-脚本运行.png)
+
+> <font color=orange>*__注意：__*</font>Python解释器执行程序是解释执行，解释的根本就是打开文件读内容，因此文件的后缀名并没有硬性限制，但通常定义为.py结尾。
+
+### Python注释
+
+&emsp;&emsp;注释就是对代码的解释说明，注释的内容不会被当作代码运行，通过注释可以增强代码的可读性。注释可以分为单行注释和多行注释：
+
++ <font color=green>**单行注释：**</font>使用#（井号）
++ <font color=green>**多行注释：**</font>使用三对双引号或者三对单引号
+
+```python
+""" 
+这里是多行注释文本 
+下面是一段输出内容的代码 
+""" 
+
+print("Hello World") # 单行注释，用来输出 Hello Wold 
+
+''' 
+使用单引号 
+多行注释 
+'''
+```
